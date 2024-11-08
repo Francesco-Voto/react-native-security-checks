@@ -86,6 +86,12 @@ android {
     targetCompatibility JavaVersion.VERSION_1_8
   }
 
+  externalNativeBuild {
+    cmake {
+      path "src/main/jni/CMakeLists.txt"
+    }
+  }
+
   sourceSets {
     main {
       if (isNewArchitectureEnabled()) {
