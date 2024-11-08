@@ -12,11 +12,11 @@ npm install react-native-security-checks
 
 
 ```js
-import { multiply } from 'react-native-security-checks';
+import { isFridaDetected } from 'react-native-security-checks';
 
 // ...
 
-const result = multiply(3, 7);
+const result = isFridaDetected();
 ```
 
 
