@@ -1,9 +1,9 @@
 #import <Foundation/Foundation.h>
-#import "SecurityChecks.h"
+#import "RNSecurityChecks.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface SecurityChecks(Frida)
+@interface RNSecurityChecks(Frida)
 + (BOOL) isFrida;
 @end
 
