@@ -154,7 +154,6 @@
     "source": "src",
     "output": "lib",
     "targets": [
-      "codegen",
       [
         "commonjs",
         {
@@ -180,10 +179,6 @@
     "name": "RNSecurityChecksSpec",
     "type": "all",
     "jsSrcsDir": "src",
-    "outputDir": {
-      "ios": "ios/generated",
-      "android": "android/generated"
-    },
     "android": {
       "javaPackageName": "com.securitychecks"
     }
