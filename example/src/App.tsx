@@ -1,12 +1,10 @@
 import { StyleSheet, View, Text } from 'react-native';
-import { multiply } from 'react-native-security-checks';
-
-const result = multiply(3, 7);
+import { isFridaDetected } from 'react-native-security-checks';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Result: {result}</Text>
+      <Text>Frida detected: {isFridaDetected() ? 'yes' : 'no'}</Text>
     </View>
   );
 }
