@@ -3,34 +3,34 @@
 #import <mach-o/dyld.h>
 #import <objc/runtime.h>
 
-@implementation SecurityChecks (Frida)
+@implementation RNSecurityChecks (Frida)
 
 + (BOOL) isFrida {
-  if ([SecurityChecks hasCydiaInstalled]) {
+  if ([RNSecurityChecks hasCydiaInstalled]) {
     return YES;
   }
-  if ([SecurityChecks hasUndecimusInstalled]) {
+  if ([RNSecurityChecks hasUndecimusInstalled]) {
     return YES;
   }
-  if ([SecurityChecks hasSileoInstalled]) {
+  if ([RNSecurityChecks hasSileoInstalled]) {
     return YES;
   }
-  if ([SecurityChecks hasZbraInstalled]) {
+  if ([RNSecurityChecks hasZbraInstalled]) {
     return YES;
   }
-  if ([SecurityChecks isContainsSuspiciousApps]) {
+  if ([RNSecurityChecks isContainsSuspiciousApps]) {
     return YES;
   }
-  if ([SecurityChecks checkDYLD]) {
+  if ([RNSecurityChecks checkDYLD]) {
     return YES;
   }
-  if ([SecurityChecks checkSuspiciousObjCClasses]) {
+  if ([RNSecurityChecks checkSuspiciousObjCClasses]) {
     return YES;
   }
-  if ([SecurityChecks isSuspiciousSystemPathsExists]) {
+  if ([RNSecurityChecks isSuspiciousSystemPathsExists]) {
     return YES;
   }
-  return [SecurityChecks canEditSystemFiles];
+  return [RNSecurityChecks canEditSystemFiles];
   
 }
 
@@ -150,7 +150,7 @@
     nil
   ];
   
-  if (![SecurityChecks isInSimulator]) {
+  if (![RNSecurityChecks isInSimulator]) {
     [suspiciousSystemPathsToCheck addObjectsFromArray: @[
       @"/bin/bash",
       @"/usr/sbin/sshd",

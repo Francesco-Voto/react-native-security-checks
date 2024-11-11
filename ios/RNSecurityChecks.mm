@@ -1,10 +1,10 @@
-#import "SecurityChecks.h"
+#import "RNSecurityChecks.h"
 #import "SecurityChecks+Frida.h"
 
-@implementation SecurityChecks
+@implementation RNSecurityChecks
 RCT_EXPORT_MODULE()
 - (NSNumber *)isFridaDetected {
-  return [SecurityChecks isFrida] ? @YES : @NO;
+  return [RNSecurityChecks isFrida] ? @YES : @NO;
 }
 
 

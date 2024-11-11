@@ -5,4 +5,4 @@ export interface Spec extends TurboModule {
   isFridaDetected(): boolean;
 }
 
-export default TurboModuleRegistry.getEnforcing<Spec>('SecurityChecks');
+export default TurboModuleRegistry.getEnforcing<Spec>('RNSecurityChecks');

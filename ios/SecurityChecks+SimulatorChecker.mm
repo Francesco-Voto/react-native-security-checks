@@ -1,7 +1,7 @@
 #import "SecurityChecks+SimulatorChecker.h"
 
 
-@implementation SecurityChecks (SimulatorChecker)
+@implementation RNSecurityChecks (SimulatorChecker)
 
 + (BOOL) isInSimulator {
   return TARGET_OS_SIMULATOR != 0;
