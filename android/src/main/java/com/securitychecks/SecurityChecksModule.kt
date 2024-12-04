@@ -7,14 +7,27 @@ import com.facebook.react.module.annotations.ReactModule
 class SecurityChecksModule(reactContext: ReactApplicationContext) :
   NativeSecurityChecksSpec(reactContext) {
 
+    private var frida: FridaSecurityChecker = FridaSecurityChecker()
+
   override fun getName(): String {
     return NAME
   }
 
-  // Example method
-  // See https://reactnative.dev/docs/native-modules-android
-  override fun multiply(a: Double, b: Double): Double {
-    return a * b
+  override fun isFridaDetected(): Boolean {
+
+      return frida.isDetectedDevKeys ||
+        frida.isDetectedTestKeys ||
+        frida.isSuExists ||
+        frida.isFoundHooks ||
+        frida.isFoundXposed ||
+        frida.isFoundSuBinary ||
+        frida.isPermissiveSelinux ||
+        frida.isFoundResetProp ||
+        frida.isAccessedSuperuserApk ||
+        frida.isFoundDangerousProps ||
+        frida.isNotFoundReleaseKeys ||
+        frida.isFoundWrongPathPermission ||
+        frida.isFoundBusyboxBinary
   }
 
   companion object {

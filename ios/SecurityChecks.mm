@@ -1,15 +1,14 @@
 #import "SecurityChecks.h"
+#import "SecurityChecks+Frida.h"
 
 @implementation SecurityChecks
 RCT_EXPORT_MODULE()
-
-// Don't compile this code when we build for the old architecture.
-#ifdef RCT_NEW_ARCH_ENABLED
-- (NSNumber *)multiply:(double)a b:(double)b {
-    NSNumber *result = @(a * b);
-
-    return result;
+- (NSNumber *)isFridaDetected {
+  return [SecurityChecks isFrida] ? @YES : @NO;
 }
+
+
+#ifdef RCT_NEW_ARCH_ENABLED
 
 - (std::shared_ptr<facebook::react::TurboModule>)getTurboModule:
     (const facebook::react::ObjCTurboModule::InitParams &)params
@@ -17,5 +16,7 @@ RCT_EXPORT_MODULE()
     return std::make_shared<facebook::react::NativeSecurityChecksSpecJSI>(params);
 }
 #endif
+
+
 
 @end
