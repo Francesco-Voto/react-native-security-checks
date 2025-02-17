@@ -2920,9 +2920,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@release-it/conventional-changelog@npm:^9.0.2":
-  version: 9.0.3
-  resolution: "@release-it/conventional-changelog@npm:9.0.3"
+"@release-it/conventional-changelog@npm:10.0.0":
+  version: 10.0.0
+  resolution: "@release-it/conventional-changelog@npm:10.0.0"
   dependencies:
     concat-stream: ^2.0.0
     conventional-changelog: ^6.0.0
@@ -2930,8 +2930,8 @@ __metadata:
     git-semver-tags: ^8.0.0
     semver: ^7.6.3
   peerDependencies:
-    release-it: ^17.0.0
-  checksum: 719df7cf906372070c0a927d8da5145f9b99f43da06699a4dd0a43867359959ea79fb0fac5e706bbcb6d42782d74bdc1f958eb3e6142cbf583a2c7efa3e20a18
+    release-it: ^18.0.0
+  checksum: 5d9c2d45c0fbb084649c3f823fc5d306dc77f7a9c81a38612d960a89b330d5f3a90536f8efa23d3b54c5e8652eec73585a054f1aba5831e4d40e2cad6c24add2
   languageName: node
   linkType: hard
 
@@ -10587,7 +10587,7 @@ __metadata:
     "@evilmartians/lefthook": ^1.5.0
     "@react-native-community/cli": 15.0.1
     "@react-native/eslint-config": ^0.73.1
-    "@release-it/conventional-changelog": ^9.0.2
+    "@release-it/conventional-changelog": 10.0.0
     "@types/jest": ^29.5.5
     "@types/react": ^18.2.44
     commitlint: ^17.0.2
