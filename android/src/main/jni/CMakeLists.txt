@@ -10,7 +10,9 @@ add_library( # Sets the name of the library.
         ${SOURCE_LIB}
 )
 
-
+set_target_properties(native-checker PROPERTIES
+    LINK_FLAGS "-Wl,-z,max-page-size=16384"
+)
 
 target_link_libraries(
         native-checker
