@@ -1,6 +1,6 @@
 {
   "name": "react-native-security-checks",
-  "version": "1.4.2",
+  "version": "1.5.0",
   "description": "Utility lib with security checks",
   "source": "./src/index.tsx",
   "main": "./lib/commonjs/index.js",
