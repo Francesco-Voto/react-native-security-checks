@@ -3,6 +3,7 @@ import { TurboModuleRegistry } from 'react-native';
 
 export interface Spec extends TurboModule {
   isFridaDetected(): boolean;
+  isSignatureValid(originalSignature: string): boolean;
 }
 
 export default TurboModuleRegistry.getEnforcing<Spec>('SecurityChecks');

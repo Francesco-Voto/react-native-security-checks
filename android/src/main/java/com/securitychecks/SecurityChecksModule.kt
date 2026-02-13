@@ -8,6 +8,7 @@ class SecurityChecksModule(reactContext: ReactApplicationContext) :
     NativeSecurityChecksSpec(reactContext) {
 
     private var frida: FridaSecurityChecker = FridaSecurityChecker()
+    private var signature: SignatureSecurityChecker = SignatureSecurityChecker(reactContext)
 
     override fun getName(): String {
         return NAME
@@ -31,7 +32,11 @@ class SecurityChecksModule(reactContext: ReactApplicationContext) :
         ).count { it } > 3
     }
 
-    companion object {
+  override fun isSignatureValid(originalSignature: String): Boolean {
+    return signature.verifyAppSignature(originalSignature)
+  }
+
+  companion object {
         const val NAME = "SecurityChecks"
     }
 }
